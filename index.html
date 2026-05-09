@@ -278,31 +278,139 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem c
 #st:hover{background:var(--gold3);transform:translateY(-3px)}
 
 /* ── RESPONSIVE ── */
+
+/* ── 1024px — Tablet largo ── */
 @media(max-width:1024px){
-  .bc.s4{grid-column:span 6}.bc.s5{grid-column:span 6}.bc.s7{grid-column:span 6}.bc.s8{grid-column:span 12}.bc.r2{grid-row:span 1}.bc.photo-card{grid-column:span 12}
+  .bc.s4{grid-column:span 6}.bc.s5{grid-column:span 6}.bc.s7{grid-column:span 6}
+  .bc.s8{grid-column:span 12}.bc.r2{grid-row:span 1}.bc.photo-card{grid-column:span 12}
   .bc.photo-card img{min-height:260px}
 }
+
+/* ── 860px — Tablet / Phone grande ── */
 @media(max-width:860px){
-  .nav-links{display:none}.burger{display:flex}
-  .hero-inner{grid-template-columns:1fr;gap:2rem;padding-top:3rem;padding-bottom:3rem}
-  .hero-photo{order:-1;padding:20px 16px}
-  .hero-ring{width:clamp(180px,52vw,260px);height:clamp(180px,52vw,260px)}
-  .hero-stats{gap:1.5rem;flex-wrap:wrap}
+  /* Nav */
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-wa{display:none}
+
+  /* Ritmo vertical das seções */
+  #sobre,#servicos,#diferenciais,#cta,#contato{padding-top:clamp(3.5rem,9vw,5rem);padding-bottom:clamp(3.5rem,9vw,5rem)}
+
+  /* Hero */
+  #hero{min-height:auto}
+  .hero-inner{grid-template-columns:1fr;gap:0;padding:2.5rem 1.5rem;text-align:center}
+  .hero-content{display:flex;flex-direction:column;align-items:center}
+  .hero-photo{order:-1;padding:2.5rem 1.5rem 1.5rem}
+  .ring-wrap{padding:44px 28px 36px}
+  .hero-ring{width:clamp(200px,52vw,260px);height:clamp(200px,52vw,260px)}
   .hb1,.hb2{display:none}
-  .hero-h1{max-width:100%}
-  .sobre-grid{grid-template-columns:1fr}
-  .sobre-float{right:.5rem}
+  .hero-h1{max-width:100%;text-align:center}
+  .hero-sub{max-width:100%;text-align:center}
+  .hero-btns{justify-content:center}
+  .hero-stats{justify-content:center;gap:2rem;flex-wrap:wrap}
+  .hero-scroll{display:none}
+
+  /* Sobre */
+  .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
+  .sobre-card{aspect-ratio:4/3;max-height:340px}
+  .sobre-float{top:1.25rem;right:1.25rem;bottom:auto;padding:1rem 1.25rem;border-radius:12px;box-shadow:0 10px 28px rgba(201,165,90,.22)}
+  .sobre-float b{font-size:1.625rem}
+  .sobre-float span{font-size:.6rem}
+
+  /* Serviços */
   .svc-grid{grid-template-columns:1fr}
-  .contato-grid{grid-template-columns:1fr}
+  .svc-head{flex-direction:column;gap:1rem;margin-bottom:2.5rem}
+  .svc-head p{max-width:100%}
+
+  /* Escritório */
+  #escritorio{height:clamp(280px,50vw,440px)}
+  .escrit-overlay{padding:0 1.75rem}
+  .escrit-copy{max-width:100%}
+
+  /* Bento */
+  .bc.s4{grid-column:span 6}.bc.s5{grid-column:span 6}
+  .bc.s7{grid-column:span 6}.bc.s8{grid-column:span 12}
+
+  /* CTA */
+  .cta-links{flex-direction:column;gap:.875rem;align-items:center}
+
+  /* Contato */
+  .contato-grid{grid-template-columns:1fr;gap:2.5rem}
+
+  /* Footer */
   .foot-top{grid-template-columns:1fr 1fr;gap:2rem}
-  .svc-head{flex-direction:column}
 }
+
+/* ── 560px — Phone ── */
 @media(max-width:560px){
-  .hero-stats{flex-direction:column;gap:1.25rem}
-  .bc.s4,.bc.s5,.bc.s7,.bc.s8{grid-column:span 12}
-  .foot-top{grid-template-columns:1fr}
-  .foot-bot{flex-direction:column;align-items:flex-start}
-  .hero-btns{flex-direction:column;align-items:flex-start}
+  /* Seções */
+  #sobre,#servicos,#diferenciais,#cta,#contato{padding-top:3rem;padding-bottom:3rem}
+  footer{padding-top:2.75rem;padding-bottom:1.5rem}
+
+  /* Hero */
+  .hero-inner{padding:2rem 1.25rem 2.5rem}
+  .hero-photo{padding:2rem 1rem 1.5rem}
+  .ring-wrap{padding:36px 20px 28px}
+  .hero-ring{width:clamp(180px,56vw,220px);height:clamp(180px,56vw,220px)}
+  .hero-h1{font-size:clamp(1.875rem,8vw,2.5rem);margin-bottom:.875rem}
+  .hero-sub{font-size:.875rem;margin-bottom:1.5rem}
+  .hero-btns{flex-direction:column;align-items:stretch;gap:.75rem;margin-bottom:1.75rem}
+  .btn-gold{justify-content:center;padding:.875rem 1.5rem}
+  .btn-line{justify-content:center}
+  .hero-stats{flex-direction:column;gap:.875rem;align-items:center}
+  .stat-val{font-size:1.375rem}
+
+  /* Sobre */
+  .sobre-card{aspect-ratio:16/9;max-height:240px}
+  .sobre-float{top:1rem;right:1rem;padding:.875rem 1.125rem;border-radius:10px;box-shadow:0 8px 22px rgba(201,165,90,.2)}
+  .sobre-float b{font-size:1.375rem}
+  .sobre-float span{font-size:.58rem}
+  .sobre-text .h2{font-size:1.75rem}
+  .sobre-p{font-size:.875rem}
+
+  /* Escritório */
+  #escritorio{height:clamp(260px,65vw,360px)}
+  .escrit-overlay{
+    padding:0 1.25rem;
+    background:linear-gradient(to top,rgba(8,8,8,.95) 0%,rgba(8,8,8,.65) 55%,rgba(8,8,8,.1) 100%)
+  }
+  .escrit-copy .h2{font-size:clamp(1.375rem,6vw,1.875rem)}
+  .escrit-copy p{font-size:.85rem}
+  .escrit-overlay{align-items:flex-end;padding-bottom:1.75rem}
+
+  /* Bento */
+  .bento .bc{grid-column:span 12!important;grid-row:span 1!important}
+  .bc.photo-card img{min-height:200px}
+
+  /* CTA */
+  .cta-h{font-size:clamp(1.875rem,7.5vw,2.5rem);line-height:1.15}
+  .cta-p{font-size:.875rem}
+  .cta-btn{width:100%;justify-content:center;padding:1rem 1.5rem}
+  .cta-links{flex-direction:column;gap:.875rem;align-items:center}
+
+  /* Contato */
+  .contato-grid{gap:2rem}
+  .cc strong{font-size:.82rem;word-break:break-word}
+  .wa-big{width:100%;justify-content:center}
+  .map-wrap iframe{height:240px}
+  .hours{flex-wrap:wrap;gap:.625rem}
+  .hours-val{font-size:.82rem}
+
+  /* Footer */
+  .foot-top{grid-template-columns:1fr;gap:1.75rem}
+  .foot-bot{flex-direction:column;align-items:flex-start;gap:.625rem}
+  .foot-disclaimer{margin-top:.875rem;padding-top:.875rem}
+}
+
+/* ── 390px — iPhone / Small Android ── */
+@media(max-width:390px){
+  .hero-inner{padding:1.75rem 1rem 2rem}
+  .hero-h1{font-size:clamp(1.75rem,9vw,2.125rem)}
+  .hero-sub{font-size:.85rem}
+  .btn-gold,.cta-btn{font-size:.82rem;padding:.875rem 1.25rem}
+  .nav-logo img{height:30px}
+  .bc{padding:1.5rem}
+  .svc-card{padding:1.875rem 1.5rem}
 }
 </style>
 </head>
