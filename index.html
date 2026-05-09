@@ -347,12 +347,15 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem c
   #sobre,#servicos,#diferenciais,#cta,#contato{padding-top:3rem;padding-bottom:3rem}
   footer{padding-top:2.75rem;padding-bottom:1.5rem}
 
+  /* Quebras de linha forçadas — suprime no mobile */
+  .hero-h1 br,.cta-h br{display:none}
+
   /* Hero */
   .hero-inner{padding:2rem 1.25rem 2.5rem}
   .hero-photo{padding:2rem 1rem 1.5rem}
   .ring-wrap{padding:36px 20px 28px}
   .hero-ring{width:clamp(180px,56vw,220px);height:clamp(180px,56vw,220px)}
-  .hero-h1{font-size:clamp(1.875rem,8vw,2.5rem);margin-bottom:.875rem}
+  .hero-h1{font-size:1.625rem;line-height:1.2;letter-spacing:-.02em;margin-bottom:.875rem}
   .hero-sub{font-size:.875rem;margin-bottom:1.5rem}
   .hero-btns{flex-direction:column;align-items:stretch;gap:.75rem;margin-bottom:1.75rem}
   .btn-gold{justify-content:center;padding:.875rem 1.5rem}
@@ -365,8 +368,11 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem c
   .sobre-float{top:1rem;right:1rem;padding:.875rem 1.125rem;border-radius:10px;box-shadow:0 8px 22px rgba(201,165,90,.2)}
   .sobre-float b{font-size:1.375rem}
   .sobre-float span{font-size:.58rem}
-  .sobre-text .h2{font-size:1.75rem}
+  .sobre-text .h2{font-size:1.5rem;line-height:1.25;letter-spacing:-.015em}
   .sobre-p{font-size:.875rem}
+
+  /* Títulos de seção */
+  .svc-head .h2,.diff-head .h2,.contato-head .h2{font-size:1.5rem;line-height:1.25;letter-spacing:-.015em}
 
   /* Escritório */
   #escritorio{height:clamp(260px,65vw,360px)}
@@ -383,7 +389,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem c
   .bc.photo-card img{min-height:200px}
 
   /* CTA */
-  .cta-h{font-size:clamp(1.875rem,7.5vw,2.5rem);line-height:1.15}
+  .cta-h{font-size:1.5rem;line-height:1.25;letter-spacing:-.02em}
   .cta-p{font-size:.875rem}
   .cta-btn{width:100%;justify-content:center;padding:1rem 1.5rem}
   .cta-links{flex-direction:column;gap:.875rem;align-items:center}
@@ -405,8 +411,10 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem c
 /* ── 390px — iPhone / Small Android ── */
 @media(max-width:390px){
   .hero-inner{padding:1.75rem 1rem 2rem}
-  .hero-h1{font-size:clamp(1.75rem,9vw,2.125rem)}
+  .hero-h1{font-size:1.5rem;letter-spacing:-.015em}
   .hero-sub{font-size:.85rem}
+  .cta-h{font-size:1.375rem}
+  .sobre-text .h2,.svc-head .h2,.diff-head .h2,.contato-head .h2{font-size:1.375rem}
   .btn-gold,.cta-btn{font-size:.82rem;padding:.875rem 1.25rem}
   .nav-logo img{height:30px}
   .bc{padding:1.5rem}
